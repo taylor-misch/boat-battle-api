@@ -1,0 +1,14 @@
+{
+  "name": "boat-battler-api",
+  "version": "1.0.0",
+  "description": "Server-side of the boat-battler game",
+  "main": "/src/app.js",
+  "scripts": {
+    "start": "nodemon ./src/app.js"
+  },
+  "author": "Taylor Misch",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.1.1"
+  }
+}
