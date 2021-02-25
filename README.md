@@ -1,3 +1,3 @@
-# boat-battler-api
+# boat-battle-api
 
-Server-side of the boat battler game
+Server-side of the boat battle game
