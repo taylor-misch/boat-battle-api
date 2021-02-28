@@ -1,9 +1,16 @@
 import dotenv from "dotenv";
 
+process.env.NODE_ENV = process.env.NODE_ENV || "development";
+
 // config() will read the .env file, parse the contents, assign it to process.env
-dotenv.config();
+const envFound = dotenv.config();
+if (envFound.error) {
+  // This error should crash whole process
+  throw new Error("⚠️  Couldn't find .env file  ⚠️");
+}
 
 export default {
-  secret: process.env.SECRET,
-  name: process.env.NAME,
+  port: process.env.PORT,
+  mongodbUri: process.env.MONGODB_URI,
+  frontendUrl: process.env.FRONTEND_URL,
 };
