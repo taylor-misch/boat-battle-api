@@ -1,4 +1,4 @@
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
@@ -13,4 +13,7 @@ export default {
   port: process.env.PORT,
   mongodbUri: process.env.MONGODB_URI,
   frontendUrl: process.env.FRONTEND_URL,
+  api: {
+    prefix: process.env.API_PREFIX,
+  },
 };

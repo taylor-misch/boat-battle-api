@@ -9,12 +9,16 @@
   },
   "author": "Taylor Misch",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.18",
     "socket.io": "^3.1.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.8",
     "cross-env": "^7.0.3",
     "nodemon": "^2.0.7"
   }

@@ -9,7 +9,6 @@ export default async () => {
       useFindAndModify: false,
     });
     console.log(`MongoDB Connected: ${connection.connection.host}`);
-    return connection.connection.db;
   } catch (error) {
     console.error(err);
     process.exit(1);
