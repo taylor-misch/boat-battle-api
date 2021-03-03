@@ -1,6 +1,11 @@
-import { Router } from "express";
+const express = require("express");
+const Router = express.Router();
 
-export default () => {
+function initRouter() {
   const app = Router();
   return app;
+}
+
+module.exports = {
+  initRouter,
 };

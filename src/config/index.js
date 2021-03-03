@@ -1,4 +1,4 @@
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
@@ -9,7 +9,7 @@ if (envFound.error) {
   throw new Error("⚠️  Couldn't find .env file  ⚠️");
 }
 
-export default {
+module.exports = {
   port: process.env.PORT,
   mongodbUri: process.env.MONGODB_URI,
   frontendUrl: process.env.FRONTEND_URL,

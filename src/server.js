@@ -1,16 +1,16 @@
-import express from "express";
-import http from "http";
-import socketio from "socket.io";
-import config from "./config/index.js";
-import bodyParser from "body-parser";
-import cors from "cors";
-import routes from "./api/index.js";
+const express = require("express");
+const http = require("http");
+const socketio = require("socket.io");
+const config = require("./config/index.js");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const { initRouter } = require("./api/index.js");
 
 async function startServer() {
   const app = express();
   app.use(cors());
   app.use(bodyParser.json());
-  app.use(config.api.prefix, routes());
+  app.use(config.api.prefix, initRouter);
 
   const httpServer = http.Server(app);
   const io = socketio(httpServer, {
