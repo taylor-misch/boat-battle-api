@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const config = require("../config/index");
+import mongoose from "mongoose";
+import config from "../config/index.js";
 
 export default async () => {
   try {
